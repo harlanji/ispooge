@@ -1,0 +1,38 @@
+{:site-title           "iSpooge"
+ :site-subtitle        "iSpooge Daily... do you?"
+ :author               "Harlan Iverson"
+ :description          "Source of spooge from little DataCenters... and mo'"
+ :site-url             "https://ispooge.com/"
+ :source-code-url      "https://github.com/harlanji/tinydatacenter"
+ :sidebar-links-title  "TinyDC Sites"
+ :sidebar-links        [{:title "Author Website" :uri "https://harlanji.com"}
+                        {:title "iSpooge Media" :uri "https://ispooge.com"}
+                        {:title "This website" :uri "https://tinydatacenter.com"}]
+ :post-root            "posts"
+ :page-root            "pages"
+ :post-root-uri        "journal"
+ :page-root-uri        ""
+ :tag-root-uri         "tag"
+ :author-root-uri      "about"
+ :blog-prefix          ""
+ :rss-name             "feed.xml"
+ :rss-filters          ["cryogen"]
+ :recent-posts         4
+ :post-date-format     "yyyy-MM-dd"
+ :archive-group-format "yyyy MMMM"
+ :sass-src             []
+ :sass-path            "sass"
+ :compass-path         "compass"
+ :theme                "blue"
+ :resources            ["img" "assets"]
+ :keep-files           [".git"]
+ :disqus?              false
+ :disqus-shortname     ""
+ :ignored-files        [#"\.#.*" #".*\.swp$"]
+ :posts-per-page       8
+ :blocks-per-preview   2
+ :previews?            false
+ :clean-urls?          false
+ :hide-future-posts?   false
+ :klipse               {}
+ :debug?               true}

@@ -1,0 +1,30 @@
+{% extends "/html/base.html" %}
+{%block subtitle %}: {{page.title}}{% endblock %}
+{% block content %}
+<div id="custom-page">
+    <div id="page-header">
+        <h2>EPISODE {{page.title}}</h2>
+    </div>
+
+     <div>
+       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{page.yt-episode-video-id}}?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+     </div>
+
+    {% if page.toc %}{{page.toc|safe}}{% endif %}
+
+    {{page.content|safe}}
+
+
+    <div id="prev-next">
+        {% if page.prev %}
+        <a href="{{page.prev.uri}}">&laquo; {{page.prev.title}}</a>
+        {% endif %}
+        {% if all page.prev page.next %}
+        ||
+        {% endif %}
+        {% if page.next %}
+        <a href="{{page.next.uri}}">{{page.next.title}} &raquo;</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
