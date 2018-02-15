@@ -16,14 +16,14 @@
  :author-root-uri      "about"
  :blog-prefix          ""
  :rss-name             "feed.xml"
- :rss-filters          ["cryogen"]
+ :rss-filters          ["ispooge"]
  :recent-posts         4
  :post-date-format     "yyyy-MM-dd"
  :archive-group-format "yyyy MMMM"
  :sass-src             []
  :sass-path            "sass"
  :compass-path         "compass"
- :theme                "blue"
+ :theme                "ispooge"
  :resources            ["img" "assets"]
  :keep-files           [".git"]
  :disqus?              false
