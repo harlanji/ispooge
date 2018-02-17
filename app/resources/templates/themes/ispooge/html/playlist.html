@@ -1,0 +1,45 @@
+{% extends "/html/base.html" %}
+{% block content %}
+<div id="playlist">
+
+	<h2>{{ page.title }}</h2>
+
+	{% for video in page.playlist-items %}
+		
+		{% ifequal forloop.counter0|mod:3 0 %}
+		<div class="row">
+	   {% endifequal %}
+   
+			<div class="col-md-4">
+				<div class="card mb-4 box-shadow">
+
+					<a href="{{ video.url }}">
+					<img class="card-img-top"
+					src="{{ video.video-thumbnail-url }}"
+					alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+					data-holder-rendered="true">
+					</a>
+
+		         <div class="card-body">
+		            <p class="card-text"><a href="{{ video.url }}">{{ video.title }}</a></p>
+		            <div class="d-flex justify-content-between align-items-center">
+		              <div class="btn-group">
+		                <a href="{{ video.url }}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+		              </div>
+		              <small class="text-muted">9 mins</small>
+		            </div>
+		          </div>				
+	
+				</div>
+			</div>
+		
+		{% ifequal forloop.counter0|mod:3 2 %}
+		</div>
+		{% else %}
+		{% if forloop.last %}
+		</div>
+		{% endif %}
+	   {% endifequal %}
+   {% endfor %}
+</div>
+{% endblock %}
