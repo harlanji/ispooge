@@ -6,10 +6,15 @@
             [cryogen-core.watcher :refer [start-watcher!]]
             [cryogen-core.plugins :refer [load-plugins]]
             [cryogen-core.compiler :refer [compile-assets-timed read-config]]
-            [cryogen-core.io :refer [path]]))
+            [cryogen-core.io :refer [path]]
+            [selmer.filters :as selmer-filters]))
 
 (defn init []
   (load-plugins)
+  
+  (println "ADDING MOD FILTER 2")
+(selmer-filters/add-filter! :mod (fn [x y] [:safe (str (mod x (read-string y)))]))  
+  
   (compile-assets-timed)
   (let [ignored-files (-> (read-config) :ignored-files)]
     (start-watcher! "resources/templates" ignored-files compile-assets-timed)))
