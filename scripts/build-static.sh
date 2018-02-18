@@ -1,3 +1,5 @@
 #!/bin/bash
 
-docker build -t website-v2-static -f Dockerfile.static .
+source scripts/env.sh
+
+docker build -t $IMAGE_STATIC -f Dockerfile.static .
