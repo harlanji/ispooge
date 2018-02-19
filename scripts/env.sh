@@ -2,6 +2,8 @@
 
 # use with source
 
+ISPOOGE_MEDIA_PATH=$PWD/../ispooge-media/dl3
+
 IMAGE=ispooge-dev
 NAME=ispooge-dev
 DEV_PORT=3000
