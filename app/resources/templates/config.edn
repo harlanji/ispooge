@@ -7,10 +7,10 @@
  :sidebar-pages-title  "Pages"
  :sidebar-links-title  "Links"
  :sidebar-links        [{:title "Author Website" :uri "https://harlanji.com"}
-                        {:title "This website" :uri "https://tinydatacenter.com"}]
+                        {:title "Tiny DataCenter" :uri "https://tinydatacenter.com"}]
  :post-root            "posts"
  :page-root            "pages"
- :post-root-uri        "journal"
+ :post-root-uri        ""
  :page-root-uri        ""
  :tag-root-uri         "tag"
  :author-root-uri      "about"
