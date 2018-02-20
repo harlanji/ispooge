@@ -1,6 +1,7 @@
 #!/bin/bash
 
-PLAYLIST=${1:"PLD5lYPY-uZpq7x2zRIiULo2oZ-tWs2lPx"}
+VIDEO=${1:"DwWvl0M"}
+
 
 youtube-dl \
   --verbose \
@@ -11,4 +12,4 @@ youtube-dl \
   --all-subs \
   --no-call-home \
   --restrict-filenames \
-  "https://www.youtube.com/playlist?list=$PLAYLIST"
+  "https://www.youtube.com/watch?v=$VIDEO"
