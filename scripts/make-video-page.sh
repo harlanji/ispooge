@@ -1,6 +1,7 @@
 #!/bin/bash
 
 VIDEO_BASENAME="$1"
+PLAYLIST_NAME="$2"
 
 VIDEO="$VIDEO_BASENAME.mp4"
 THUMBNAIL="$VIDEO_BASENAME.jpg"
@@ -13,8 +14,8 @@ read -r -d '' PAGE_MD << EOM
 {:title "Video $VIDEO_BASENAME"
  :page-index $PAGE_IDX
  :layout :video
- :video-thumbnail-url "/media/videos/$THUMBNAIL"
- :video-url "/media/videos/$HLS/out.m3u8"
+ :video-thumbnail-url "/media/videos/$PLAYLIST_NAME/$THUMBNAIL"
+ :video-url "/media/videos/$PLAYLIST_NAME/$HLS/out.m3u8"
  :video-description "$VIDEO_BASENAME"
  }
 EOM

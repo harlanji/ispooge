@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VIDEO=${1:"DwWvl0M"}
+VIDEO=${1:DwWvl0M}
 
 
 youtube-dl \

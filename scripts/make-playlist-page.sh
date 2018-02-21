@@ -6,6 +6,7 @@
 # there is a thumbnail for each downloaded video
 
 PLAYLIST_DIR="$1"
+NAME="$2"
 
 NAME=$(basename $PLAYLIST_DIR)
 PAGE_IDX=$(expr 1000 + `ls -l md-pages/playlist-*.md | wc -l`)
@@ -28,8 +29,8 @@ VIDEOS=$( find $PLAYLIST_DIR -maxdepth 1 -type f -name *.mp4 \
 
 for vid in $VIDEOS; do
   cat <<EOM
-    {:video-thumbnail-url "/media/videos/${vid}.jpg"
-	  :video-url "/media/videos/${vid}.hls/out.m3u8"
+    {:video-thumbnail-url "/media/videos/${NAME}/${vid}.jpg"
+	  :video-url "/media/videos/${NAME}/${vid}.hls/out.m3u8"
 	  :title "${vid}"
 	  :url "/video-${vid}.html"}
 EOM

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PLAYLIST=${1:"PLD5lYPY-uZpq7x2zRIiULo2oZ-tWs2lPx"}
+PLAYLIST=$1
 
 youtube-dl \
   --verbose \
