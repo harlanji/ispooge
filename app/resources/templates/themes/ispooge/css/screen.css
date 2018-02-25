@@ -24,7 +24,7 @@ body {
 }
 
 .navbar-default {
-    background-color: #428bca;
+    background-color: black;
     border: none;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .dropdown-menu {
-    background-color: #428bca;
+    background-color: black;
 }
 
 .dropdown-header {
