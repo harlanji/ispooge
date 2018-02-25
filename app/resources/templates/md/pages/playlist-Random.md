@@ -5,6 +5,12 @@
 
 
 :playlist-items [
+	{:video-thumbnail-url "/media/videos/Random/Why_iSpooge_Now_2-c67jmNPjVog.jpg"
+		  :video-url "/media/videos/Random/Why_iSpooge_Now_2-c67jmNPjVog.hls/out.m3u8"
+		  :title "Why_iSpooge_Now_2-c67jmNPjVog"
+		  :url "/video-Why_iSpooge_Now_2-c67jmNPjVog.html"}
+
+
     {:video-thumbnail-url "/media/videos/Random/Huel_Break-AYt0HH2AwOc.jpg"
 	  :video-url "/media/videos/Random/Huel_Break-AYt0HH2AwOc.hls/out.m3u8"
 	  :title "Huel_Break-AYt0HH2AwOc"
