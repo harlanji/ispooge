@@ -1,5 +1,5 @@
 {:title "iSpooge Live"
- :page-index 7000
+ :page-index 100
  :layout :live
  :video-thumbnail-url "/media/videos/Huel_Break-AYt0HH2AwOc.jpg"
  :video-url "https://ispooge.com/hls/ispoogedaily/index.m3u8"

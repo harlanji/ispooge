@@ -1,0 +1,1 @@
+{:title "Video Isolation_without_talking-5HYrc-R9Y04" :page-index 5016 :layout :video :video-thumbnail-url "/media/videos/SillyconValley/Isolation_without_talking-5HYrc-R9Y04.jpg" :video-url "/media/videos/SillyconValley/Isolation_without_talking-5HYrc-R9Y04.hls/out.m3u8" :video-description "Isolation_without_talking-5HYrc-R9Y04" }
