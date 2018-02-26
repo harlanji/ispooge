@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{title}}{% block subtitle %}{% endblock %}</title>
+    <link rel="canonical" href="{{site-url}}{{uri}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+    {% style "css/screen.css" %}
+    
+    
+    
+<link rel="stylesheet" href="/assets/videojs/video-js.css">
+<script src="/assets/videojs/video.js"></script>
+<script src="/assets/videojs/videojs-contrib-hls.js"></script>
+<script src="/assets/videojs/videojs-media-session.js"></script>
+<script src="/assets/videojs/videojs-playbackrate-adjuster.js"></script>
+<script src="/assets/videojs/videojs-contrib-quality-levels.js"></script>
+
+</head>
+<body>
+							<video id="video-player" style="position: absolute; width: 100%; height: 100%;" width="100%" height="100%" class="video-js vjs-default-skin" 
+							controls poster="{{page.video-thumbnail-url}}" data-setyp='{"width": "auto", "height": "auto", "controls": "true", "loop": "false", "autoplay": "false", "preload": "false"}'>
+							  <source src="{{page.video-url}}" type="application/x-mpegURL">
+							  </source>
+							  <p class="vjs-no-js">The browser doesn't seem to support our video player... new browsers should.</p>
+							</video>
+							
+							<script>
+							var player = videojs('video-player');
+							
+							player.ready(function() {
+							   var myPlayer = this;
+							   var vid = document.location.hash.substr(1);
+							   if (vid) {
+							   myPlayer.poster('/media/videos/' + vid + '.jpg');
+							   myPlayer.src({ type: 'application/x-mpegURL', src: '/media/videos/' + vid + '.hls/out.m3u8' });
+
+							   }
+							   
+							   player.mediaSession();
+							   player.qualityLevels();
+							 });
+							 
+							</script>
+					
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

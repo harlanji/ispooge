@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="/assets/videojs/video-js.css">
 <script src="/assets/videojs/video.js"></script>
 <script src="/assets/videojs/videojs-contrib-hls.js"></script>
-
+<script src="/assets/videojs/videojs-media-session.js"></script>
 <div id="custom-page">
     <div id="page-header">
         <h2>{{page.title}}</h2>
@@ -23,6 +23,11 @@ controls poster="{{page.video-thumbnail-url}}" data-setyp='{"controls": "true", 
 
 <script>
 var player = videojs('video-player');
+
+							player.ready(function() {
+							
+							   player.mediaSession();
+});
 //player.play();
 </script>
 
