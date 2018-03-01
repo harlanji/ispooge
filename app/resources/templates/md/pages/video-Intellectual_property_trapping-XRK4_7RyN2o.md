@@ -1,1 +1,0 @@
-{:title "Video Intellectual_property_trapping-XRK4_7RyN2o" :page-index 5013 :layout :video :video-thumbnail-url "/media/videos/SillyconValley/Intellectual_property_trapping-XRK4_7RyN2o.jpg" :video-url "/media/videos/SillyconValley/Intellectual_property_trapping-XRK4_7RyN2o.hls/out.m3u8" :video-description "Intellectual_property_trapping-XRK4_7RyN2o" }

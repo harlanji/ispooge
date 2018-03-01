@@ -1,1 +1,0 @@
-{:title "Video A_managers_hire_A_players-y8Dduuqt25I" :page-index 5022 :layout :video :video-thumbnail-url "/media/videos/SillyconValley/A_managers_hire_A_players-y8Dduuqt25I.jpg" :video-url "/media/videos/SillyconValley/A_managers_hire_A_players-y8Dduuqt25I.hls/out.m3u8" :video-description "A_managers_hire_A_players-y8Dduuqt25I" }
