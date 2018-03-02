@@ -4,9 +4,9 @@ PLAYLIST_ID=${1:-"PLD5lYPY-uZpq7x2zRIiULo2oZ-tWs2lPx"}
 NAME=${2:-"Random"}
 
 
-TINYDC=$HOME/p/tinydatacenter
+TINYDC=$HOME/tinydatacenter
 ISPOOGE=$TINYDC/ispooge.com-v2
-ISPOOGE_MEDIA=$TINYDC/ispooge-media
+ISPOOGE_MEDIA=$HOME/ispooge-media
 
 PLAYLIST=$ISPOOGE_MEDIA/videos/$NAME
 
@@ -16,12 +16,14 @@ mkdir -p $PLAYLIST
 cd $PLAYLIST
 
 
-$ISPOOGE/scripts/download-playlist.sh $PLAYLIST_ID
+#$ISPOOGE/scripts/download-playlist.sh $PLAYLIST_ID
 
 ls -la
 
-VIDEOS=$( find $PLAYLIST -maxdepth 1 -type f -name "*.mp4" \
-  | xargs -n1 basename -s .mp4 )
+VIDEOS=$( find $PLAYLIST -maxdepth 1 -type d -name "*.hls" \
+  | xargs -n1 basename -s ".hls" )
+
+
 
 for vid in $VIDEOS; do
   cd $PLAYLIST
@@ -35,12 +37,14 @@ for vid in $VIDEOS; do
   
     mkdir -p $hls
     cd $hls
-    $ISPOOGE/scripts/segment-video.sh $vid_file
+    #$ISPOOGE/scripts/segment-video.sh $vid_file
   fi  
     
   cd $ISPOOGE
-  scripts/make-video-page.sh $vid $NAME > "md-pages/video-${vid}.md" 
+  pdate=`date +%Y-%m-%d` # todo get from video metadata
+  scripts/make-video-page.sh $vid $NAME > "md-posts/${pdate}-video-${vid}.md" 
 done
 
 cd $ISPOOGE
-scripts/make-playlist-page.sh $PLAYLIST $NAME > "md-pages/playlist-${NAME}.md"
+pdate=`date +%Y-%m-%d` # todo get from playlist metadata
+scripts/make-playlist-page.sh $PLAYLIST $NAME > "md-posts/${pdate}-playlist-${NAME}.md"

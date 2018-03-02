@@ -1,0 +1,1 @@
+{:title "Video Passionate_Programmers-cxqtlRh4g48" :page-index 5028 :layout :video :video-thumbnail-url "/media/videos/SillyconValley/Passionate_Programmers-cxqtlRh4g48.jpg" :video-url "/media/videos/SillyconValley/Passionate_Programmers-cxqtlRh4g48.hls/out.m3u8" :video-description "Passionate_Programmers-cxqtlRh4g48" }

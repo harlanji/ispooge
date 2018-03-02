@@ -2,10 +2,10 @@
 
 # use with source
 
-ISPOOGE_MEDIA_PATH=$PWD/../ispooge-media
+ISPOOGE_MEDIA_PATH="$HOME/ispooge-media"
 
-IMAGE=ispooge-dev
-NAME=ispooge-dev
+IMAGE=ispooge-build
+NAME=ispooge.com-build
 DEV_PORT=33000
 STATIC_PORT=33080
 
@@ -14,5 +14,5 @@ DOMAIN=ispooge.com
 HOSTS=ispooge.com
 
 
-NAME_STATIC=$NAME-static
-IMAGE_STATIC=$IMAGE-static
+NAME_STATIC=ispooge.com-static
+IMAGE_STATIC=docker-registry.local:5000/ispooge.com/ispooge-static:7
