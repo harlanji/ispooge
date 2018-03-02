@@ -1,10 +1,25 @@
 {% extends "/html/base.html" %}
+
+
+{% block head %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ispoogedaily">
+<meta name="twitter:creator" content="@harlanji">
+
+<meta property="og:url" content="{{site-url}}{{uri}}">
+<meta property="og:title" content="{{ post.title }}">
+<meta property="og:description" content="Playlist {{ post.title }}">
+
+
+{% endblock %}
+
+
 {% block content %}
 <div id="playlist">
 
-	<h2>{{ page.title }}</h2>
+	<h2>{{ post.title }}</h2>
 
-	{% for video in page.playlist-items %}
+	{% for video in post.playlist-items %}
 		
 		{% ifequal forloop.counter0|mod:3 0 %}
 		<div class="row">

@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8"/>
     <title>{{title}}{% block subtitle %}{% endblock %}</title>
     <link rel="canonical" href="{{site-url}}{{uri}}">
+    
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ispoogedaily">
+<meta name="twitter:creator" content="@harlanji">
+
+<meta property="og:url" content="{{site-url}}{{uri}}">
+<meta property="og:title" content="Sunset over ocean beach">
+<meta property="og:description" content="VIDEO - Sunset over ocean beach.">
+<meta property="og:image" content="{{page.video-thumbnail-url}}">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
           type='text/css'>

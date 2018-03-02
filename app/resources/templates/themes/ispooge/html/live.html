@@ -1,10 +1,15 @@
 {% extends "/html/base.html" %}
 {%block subtitle %}: {{page.title}}{% endblock %}
-{% block content %}
 
+
+{% block head %}
 <link rel="stylesheet" href="/assets/videojs/video-js.css">
 <script src="/assets/videojs/video.js"></script>
 <script src="/assets/videojs/videojs-contrib-hls.js"></script>
+{% endblock %}
+
+{% block content %}
+
 
 <div id="custom-page">
     <div id="page-header">
