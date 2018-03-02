@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8"/>
     <title>{{title}}{% block subtitle %}{% endblock %}</title>
@@ -11,6 +11,10 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
     {% style "css/screen.css" %}
+
+    {% block head %}
+    {% endblock %}    
+    
 </head>
 <body>
 
@@ -29,14 +33,14 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li {% if home %} class="active" {% endif %}><a href="{{index-uri}}">Home</a></li>
-                <li><a href="/live.html">Live</a></li>
                 {% for nav-page in navbar-pages %}
                 <li
                 {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %}>
                 <a href="{{nav-page.uri}}">{{nav-page.title}}</a>
                 </li>
                 {% endfor %}
-                <li><a href="{{rss-uri}}">RSS</a></li>
+                <li><a href="/live.html">Live</a></li>
+                <li {% if archives %} class="active" {% endif %}><a href="{{archives-uri}}">Archives</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         More <span class="caret"></span></a>
@@ -64,13 +68,12 @@
                         {% endfor %}
                       {% endif %}
 
-                      {% if sidebar-links|not-empty %}
-                        <li class="divider"></li>
-                        <li class="dropdown-header">{{ sidebar-links-title }}</li>
-                          {% for post in sidebar-links %}
-                            <li><a href="{{post.uri}}">{{post.title}}</a></li>
-                          {% endfor %}
-                        {% endif %}
+                      <li class="divider"></li>
+                      <li class="dropdown-header">{{ sidebar-links-title }}</li>
+                      <li><a href="{{rss-uri}}">RSS (need reader)</a></li>
+                      {% for post in sidebar-links %}
+                        <li><a href="{{post.uri}}">{{post.title}}</a></li>
+                      {% endfor %}
                     </ul>
                 </li>
             </ul>

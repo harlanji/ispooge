@@ -6,7 +6,8 @@
  :source-code-url      "https://github.com/harlanji/tinydatacenter"
  :sidebar-pages-title  "Pages"
  :sidebar-links-title  "Links"
- :sidebar-links        [{:title "Author Website" :uri "https://harlanji.com"}
+ :sidebar-links        [{:title "Live" :uri "/live.html"}
+                        {:title "Author Website" :uri "https://harlanji.com"}
                         {:title "Tiny DataCenter" :uri "https://tinydatacenter.com"}]
  :post-root            "posts"
  :page-root            "pages"
