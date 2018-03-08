@@ -1,8 +1,7 @@
 {:title "Random"
 
-:page-index 1002
+:tags ["playlist"]
 :layout :playlist
-
 
 :playlist-items [
     {:video-thumbnail-url "/media/videos/Random/iSpooge_Daily_-_Fri_Feb_16_2018-1ajKR1HoYoo.jpg"
