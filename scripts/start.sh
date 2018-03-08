@@ -2,7 +2,7 @@
 
 source scripts/env.sh
 
-docker run -d --restart always \
+docker run -d --restart unless-stopped \
 -v $PWD/app:/tmp/app \
 -v "$ISPOOGE_MEDIA_PATH:/tmp/app/resources/public/media:ro" \
 -v "/tmp/hls/ispooge.com:/tmp/app/resources/public/hls:ro" \
