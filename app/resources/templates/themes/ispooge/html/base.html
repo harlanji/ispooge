@@ -45,15 +45,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         More <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                      {% if sidebar-pages|not-empty %}
-                        <li class="dropdown-header">{{ sidebar-pages-title }}</li>
-                          {% for page in sidebar-pages %}
-                          <li><a href="{{page.uri}}">{{page.title}}</a></li>
-                          {% endfor %}
-                      {% endif %}
 
                       {% if latest-posts|not-empty %}
-                        <li class="divider"></li>
                         <li class="dropdown-header">Recent Posts</li>
                         {% for post in latest-posts %}
                           <li><a href="{{post.uri}}">{{post.title}}</a></li>
@@ -66,6 +59,14 @@
                         {% for tag in tags %}
                           <li><a href="{{tag.uri}}">{{tag.name}}</a></li>
                         {% endfor %}
+                      {% endif %}
+
+                      {% if sidebar-pages|not-empty %}
+                        <li class="divider"></li>
+                        <li class="dropdown-header">{{ sidebar-pages-title }}</li>
+                          {% for page in sidebar-pages %}
+                          <li><a href="{{page.uri}}">{{page.title}}</a></li>
+                          {% endfor %}
                       {% endif %}
 
                       <li class="divider"></li>

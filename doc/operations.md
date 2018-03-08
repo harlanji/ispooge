@@ -14,6 +14,26 @@ Assume you want to create a page A from the `ispooge.com-v2` directory.
 * Edit the page with your editor... `nano` in CLI, `Bluefish` in X.
 
 
+
+## Create a new playlist
+
+Playlists are created in two parts. The playlist-Random post and optionally by the video post having 
+the playlist-Random tag combined with a filter of same name in config.edn--creating a filtered playlist for rss readers.
+
+```text
+
++- md
+   +- posts
+      +- DATE-video-TITLE-ID.md
+      +- DATE-playlist-NAME.md
+   videos
+   +- TITLE-ID.mp4
+   playlists
+   +- NAME-ID.json
+
+```
+
+
 ## Create a new video
 
 Creating a new video is accomplished by copying it and a cover image to the `$ISPOOGE_MEDIA/videos`
@@ -27,6 +47,15 @@ Assuming you have files `MyVideo.mp4` and `MyVideo.jpg`:
 * `ls -la` - you should see `out.m3u8` and `out0.ts` listed.
 * `cd ../../../tinydatacenter/ispooge.com-v2`
 * `scripts/make-video-page.sh A > md-pages/video-A.md`
+
+The video page has in the EDN header
+
+```clojure
+{:layout :video
+ :tags ["video" "playlist-Random"]
+}
+```
+
 
 That's it... see the `Add a page` section for more details.
 

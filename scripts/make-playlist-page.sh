@@ -32,6 +32,7 @@ for vid in $VIDEOS; do
     {:video-thumbnail-url "/media/videos/${NAME}/${vid}.jpg"
 	  :video-url "/media/videos/${NAME}/${vid}.hls/out.m3u8"
 	  :title "${vid}"
+	  :tags ["playlist" "playlist-${NAME}"]
 	  :url "/video-${vid}.html"}
 EOM
   
