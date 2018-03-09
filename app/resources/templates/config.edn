@@ -17,7 +17,7 @@
  :author-root-uri      "about"
  :blog-prefix          ""
  :rss-name             "feed.xml"
- :rss-filters          ["video" "playlist" "playlist-Random"]
+ :rss-filters          ["video" "playlist" "playlist-Random" "live"]
  :recent-posts         8
  :post-date-format     "yyyy-MM-dd"
  :archive-group-format "yyyy MMMM"
