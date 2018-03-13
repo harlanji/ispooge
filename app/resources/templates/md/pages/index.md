@@ -3,17 +3,21 @@
  :layout :index
  :page-index 0}
 
-Welcome to iSpooge :) 
 
-Tune in on [iSpooge Live](live.html) 
-or [Periscope](https://pscp.tv/iSpoogeDaily)
-or [Facebook Live](https://www.facebook.com/ispooge/)
-or [YouTube Live](https://www.youtube.com/channel/UCUMn9G0yzhQWXiRTOmPLXOg)
-or [Twitch](https://twitch.tv/iSpoogeDaily).
+#### Tune in
 
-Updates on [Twitter](https://twitter.com/ispoogedaily) or below.
+* on [iSpooge Live](live.html) 
+* or [Twitch](https://twitch.tv/iSpoogeDaily)
+* or [YouTube Live](https://www.youtube.com/channel/UCUMn9G0yzhQWXiRTOmPLXOg)
+* or sometimes [Facebook Live](https://www.facebook.com/ispooge/)
+* or rarely [Periscope](https://pscp.tv/iSpoogeDaily).
 
-Drop me a line to come on the show: social at this domain.com or (four one f1ve).93 seven.7four67
+
+#### Updates on
+* [Gab.ai](https://gab.ai/ispooge)
+* or [SteemIt](https://steemit.com/@ispooge)
+* or [Twitter](https://twitter.com/ispoogedaily)
+* or below.
 
 #### Programming
 
@@ -29,11 +33,12 @@ See our [calendar](https://calendar.google.com/calendar?cid=ZnZyYTk0bjlvdGlzcGs1
 
 
 
-
-
-
 ## Contact
 
-* social @t ispooge d0t com or (four one f1ve).93 seven.7four67
+
+Drop me a line to come on the show: 
+
+* social at this domain com
+* or (four one f1ve).93 seven.7four67
 
 hola hola hola

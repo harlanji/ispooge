@@ -1,0 +1,49 @@
+
+{% if post.video-url %}
+<video id="video-player" width="640" height="360" class="video-js vjs-default-skin" 
+  controls poster="{{post.video-thumbnail-url}}" data-setyp='{"controls": "true", "loop": "false", "autoplay": "false", "preload": "false"}'>
+    <source src="{{post.video-url}}" type="application/x-mpegURL">
+    </source>
+    <p class="vjs-no-js">The browser doesn't seem to support our video player... new browsers should.</p>
+  </video>
+  
+  <script>
+  var player = videojs('video-player');
+  
+  							player.ready(function() {
+  							
+  							   player.mediaSession();
+  });
+  //player.play();
+  </script>
+
+{% else %}
+
+Twitch: {{post.video-twitch-channel}}
+
+  {% if post.video-twitch-channel %}
+  
+  
+      <!-- Add a placeholder for the Twitch embed -->
+      <div id="twitch-embed"></div>
+
+      <!-- Load the Twitch embed script -->
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+      <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+          width: 640,
+          height: 500, // 360 + 180 (chat) - 40
+          channel: "{{ post.video-twitch-channel }}"
+        });
+      </script>
+  {% else %}
+    {% if page.video-yt-id %}
+     <div>
+       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{post.video-yt-id}}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>     
+     </div>
+    {% endif %}
+
+  {% endif %}
+{% endif %}

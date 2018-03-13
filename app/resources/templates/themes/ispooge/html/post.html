@@ -3,14 +3,8 @@
 {% block content %}
 <div id="post">
     {% include "/html/post-content.html" %}
-    <div id="prev-next">
-        {% if post.prev %}
-        <a href="{{post.prev.uri}}">&laquo; {{post.prev.title}}</a>
-        {% endif %}
-        {% if post.next %}
-        <a class="right" href="{{post.next.uri}}">{{post.next.title}} &raquo;</a>
-        {% endif %}
-    </div>
+
+    {% include "/html/partials/post-pagination.html" %}
 
     {% if disqus-shortname %}
     <div id="disqus_thread"></div>

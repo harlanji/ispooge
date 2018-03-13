@@ -1,0 +1,18 @@
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ispoogedaily">
+<meta name="twitter:creator" content="@harlanji">
+
+<meta property="og:url" content="{{site-url}}{{uri}}">
+<meta property="og:title" content="{{post.title}}">
+<meta property="og:description" content="VIDEO - {{post.title}}.">
+
+{% if post.video-thumbnail-url %}
+<meta property="og:image" content="{{site-url}}{{post.video-thumbnail-url}}">
+{% endif %}
+
+{% if post.video-url %}
+<link rel="stylesheet" href="/assets/videojs/video-js.css">
+<script src="/assets/videojs/video.js"></script>
+<script src="/assets/videojs/videojs-contrib-hls.js"></script>
+<script src="/assets/videojs/videojs-media-session.js"></script>
+{% endif %}

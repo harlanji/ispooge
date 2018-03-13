@@ -1,5 +1,5 @@
 {% extends "/html/base.html" %}
-{%block subtitle %}: {{page.title}}{% endblock %}
+{%block subtitle %}: Live{% endblock %}
 
 
 {% block head %}
@@ -31,20 +31,9 @@ var player = videojs('video-player');
 //player.play();
 </script>
 
+
     {{page.content|safe}}
 
 
-
-    <div id="prev-next">
-        {% if page.prev %}
-        <a href="{{page.prev.uri}}">&laquo; {{page.prev.title}}</a>
-        {% endif %}
-        {% if all page.prev page.next %}
-        ||
-        {% endif %}
-        {% if page.next %}
-        <a href="{{page.next.uri}}">{{page.next.title}} &raquo;</a>
-        {% endif %}
-    </div>
 </div>
 {% endblock %}

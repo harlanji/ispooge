@@ -2,19 +2,9 @@
 {%block subtitle %}: {{post.title}}{% endblock %}
 
 {% block head %}
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@ispoogedaily">
-<meta name="twitter:creator" content="@harlanji">
 
-<meta property="og:url" content="{{site-url}}{{uri}}">
-<meta property="og:title" content="{{post.title}}">
-<meta property="og:description" content="VIDEO - {{post.title}}.">
-<meta property="og:image" content="{{site-url}}{{post.video-thumbnail-url}}">
+{% include "/html/partials/video-head.html" %}
 
-<link rel="stylesheet" href="/assets/videojs/video-js.css">
-<script src="/assets/videojs/video.js"></script>
-<script src="/assets/videojs/videojs-contrib-hls.js"></script>
-<script src="/assets/videojs/videojs-media-session.js"></script>
 
 {% endblock %}
 
@@ -26,36 +16,10 @@
         <h2>{{post.title}}</h2>
     </div>
 
-
-
-<video id="video-player" width="640" height="360" class="video-js vjs-default-skin" 
-controls poster="{{post.video-thumbnail-url}}" data-setyp='{"controls": "true", "loop": "false", "autoplay": "false", "preload": "false"}'>
-  <source src="{{post.video-url}}" type="application/x-mpegURL">
-  </source>
-  <p class="vjs-no-js">The browser doesn't seem to support our video player... new browsers should.</p>
-</video>
-
-<script>
-var player = videojs('video-player');
-
-							player.ready(function() {
-							
-							   player.mediaSession();
-});
-//player.play();
-</script>
+    {% include "/html/partials/video-player.html" %}
 
     {{post.content|safe}}
 
-
-
-    <div id="prev-next">
-        {% if post.prev %}
-        <a href="{{post.prev.uri}}">&laquo; {{post.prev.title}}</a>
-        {% endif %}
-        {% if post.next %}
-        <a class="right" href="{{post.next.uri}}">{{post.next.title}} &raquo;</a>
-        {% endif %}
-    </div>
+    {% include "/html/partials/post-pagination.html" %}
 </div>
 {% endblock %}
