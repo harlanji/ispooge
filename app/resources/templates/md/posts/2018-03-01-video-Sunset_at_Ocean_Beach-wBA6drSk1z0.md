@@ -1,1 +1,3 @@
-{:title "Video Sunset_at_Ocean_Beach-wBA6drSk1z0" :page-index 5028 :layout :video :video-thumbnail-url "/media/videos/Random/Sunset_at_Ocean_Beach-wBA6drSk1z0.jpg" :video-url "/media/videos/Random/Sunset_at_Ocean_Beach-wBA6drSk1z0.hls/out.m3u8" :video-description "Sunset_at_Ocean_Beach-wBA6drSk1z0" }
+{:title "Video Sunset_at_Ocean_Beach-wBA6drSk1z0" 
+:video-embed-path "Random/Video Sunset_at_Ocean_Beach-wBA6drSk1z0"
+:page-index 5028 :layout :video :video-thumbnail-url "/media/videos/Random/Sunset_at_Ocean_Beach-wBA6drSk1z0.jpg" :video-url "/media/videos/Random/Sunset_at_Ocean_Beach-wBA6drSk1z0.hls/out.m3u8" :video-description "Sunset_at_Ocean_Beach-wBA6drSk1z0" }

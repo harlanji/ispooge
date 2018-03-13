@@ -17,6 +17,15 @@
   //player.play();
   </script>
 
+
+{% if post.video-embed-path %}
+<button onclick="var el = $('#video-embed-code'); var newDisplay = (el.css('display') == 'none') ? 'block' : 'none'; el.css('display', newDisplay); console.log(newDisplay);">Embed Code</button>
+<textarea id="video-embed-code" style="display: none; width: 30em; height: 6em; font-family: monospace;"><iframe src="{{site-url}}/embed.html#{{ post.video-embed-path }}"></iframe>
+</textarea>
+{% endif %}
+
+
+
 {% else %}
 
 Twitch: {{post.video-twitch-channel}}
