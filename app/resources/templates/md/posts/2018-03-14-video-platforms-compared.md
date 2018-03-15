@@ -1,0 +1,10 @@
+{:title "Video platforms compared" 
+ :video-embed-path "ispooge/video-platforms-compared"
+ :layout :video
+ :video-thumbnail-url "/media/videos/ispooge/video-platforms-compared.jpg"
+ :video-url           "/media/videos/ispooge/video-platforms-compared.hls/playlist.m3u8"
+ :video-description "Video platforms compared"}
+
+Comparing YouTube, DTube, BitChute, iSpooge, Twitch.
+
+Biased toward iSpooge, the FLOSS offering (free/libre/open source software).
