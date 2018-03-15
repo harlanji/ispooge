@@ -1,3 +1,0 @@
-{:title "Video Coffee_and_Lao_Tzu-wHPtYexGOfI" :tags ["playlist-Random" "video"] :page-index 5028 :layout :video :video-thumbnail-url "/media/videos/SillyconValley/Coffee_and_Lao_Tzu-wHPtYexGOfI.jpg" :video-url "/media/videos/SillyconValley/Coffee_and_Lao_Tzu-wHPtYexGOfI.hls/out.m3u8" :video-description "Coffee_and_Lao_Tzu-wHPtYexGOfI" }
-
-Get coffee from [...your coffee shop](). Video recording [here](https://youtu.be/i_LoYQAjjuw).

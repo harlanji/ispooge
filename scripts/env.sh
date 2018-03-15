@@ -16,5 +16,5 @@ HOSTS=ispooge.com
 
 
 NAME_STATIC=ispooge.com-static
-IMAGE_STATIC=docker-registry.local:5000/ispooge.com/ispooge-static:13
+IMAGE_STATIC=docker-registry.local:5000/ispooge.com/ispooge-static:14
 IMAGE_STATIC_LOCAL=ispooge-static
