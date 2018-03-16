@@ -6,6 +6,10 @@
 {% include "/html/partials/video-head.html" %}
 
 
+<style type="text/css">
+  #steemit-login-container {display: none;}
+</style>
+
 {% endblock %}
 
 {% block content %}
@@ -17,6 +21,35 @@
     </div>
 
     {% include "/html/partials/video-player.html" %}
+
+
+{% if all steemit? post.steemit-permlink %}
+
+<button id="steemit-login-button" onclick="$('#steemit-login-container').show(); $(this).hide();" title="We encourage you to VIEW SOURCE, or vote on SteemIt">STEEM Login</button> 
+<span class="view-on-steemit"><a href="https://steemit.com/@{{ post.steemit-author }}/{{ post.steemit-permlink }}">View on SteemIt</a></span>
+{% include "/html/partials/steem-login.html" with form-id="steemit-login" login-function="loginUser" cancel-function="cancelLoginUser" logout-function="logoutUser" %}
+
+
+<script>
+
+var STEEMIT_API_URL = '{{ steemit-api-url }}';
+var STEEMIT_AUTHOR = '{{ post.steemit-author }}';
+var STEEMIT_PERMLINK = '{{ post.steemit-permlink }}';
+
+</script>
+
+{% script "js/steem-login.js" %}
+
+    
+    <div id="vote-video">
+      STEEM Vote: 
+      <button class="vote-up" onclick="voteUp()">UP <span class="count"></span></button>
+      <button class="vote-down" onclick="voteDown()">DOWN <span class="count"></span></button>
+    </div>
+
+
+{% endif %}
+
 
     {{post.content|safe}}
 

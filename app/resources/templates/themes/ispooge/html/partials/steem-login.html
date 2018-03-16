@@ -1,0 +1,23 @@
+<div id="{{form-id}}-container" style="text-align: center; width: 100%">
+  <form id="{{form-id}}" style="display: table; margin: auto; text-align: left; border: 1px solid black; padding: 8px; width: fit-content;">
+    <h2>STEEM Login</h2>
+    <p class="error-message"></p>
+    <p>
+        <input class="username" name="username" type="text" placeholder="Username">
+    </p>
+    <p>
+      <input class="postingKey" name="postingKey" type="password" placeholder="Private Posting Key">
+      <a href="javascript:void(0)" title="SteemIt.com &gt; Wallet &gt; Permissions &gt; Posting Key (read description) &gt; Private Key">?</a>
+    </p>
+    <p style="text-align: center;">
+      Valid until the tab is closed
+    </p>
+    <p style="text-align: center">
+      <input type="button" value="Login" onclick="{{login-function}}('{{form-id}}');">
+      <input type="button" value="Cancel" onclick="{{cancel-function}}('{{form-id}}');">
+    </p>
+    <p style="text-align: center;">
+      <a href="javascript:{{logout-function}}('{{form-id}}');">Logout</a>
+    </p>
+  </form>
+</div>

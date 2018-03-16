@@ -29,6 +29,9 @@
  :keep-files           [".git"]
  :disqus?              false
  :disqus-shortname     ""
+ :steemit?             true
+ :steemit-api-url      "https://api.steemit.com"
+ :steemit-tag          "ispooge"
  :ignored-files        [#"\.#.*" #".*\.swp$"]
  :posts-per-page       8
  :blocks-per-preview   2
