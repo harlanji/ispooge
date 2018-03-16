@@ -3,7 +3,12 @@
  :layout :video
  :video-thumbnail-url "/media/videos/ispooge/video-platforms-compared.jpg"
  :video-url           "/media/videos/ispooge/video-platforms-compared.hls/playlist.m3u8"
- :video-description "Video platforms compared"}
+ :video-description "Video platforms compared"
+
+
+ :steemit-author "ispooge"
+ :steemit-permlink "video-platforms-compared"
+}
 
 Comparing YouTube, DTube, BitChute, iSpooge, Twitch.
 
