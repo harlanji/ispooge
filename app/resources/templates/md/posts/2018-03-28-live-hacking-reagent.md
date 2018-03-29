@@ -1,4 +1,5 @@
 {:title "Live Hacking Reagent" 
+ :tags ["video" "live"]
  :layout :video
  :video-yt-id "M4NgTiyettw"
  :video-yt-additional-ids ["jEllc2ZqBSs"] ; TODO, add to template.

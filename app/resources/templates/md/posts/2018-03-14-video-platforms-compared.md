@@ -1,4 +1,5 @@
-{:title "Video platforms compared" 
+{:title "Video platforms compared"
+ :tags ["video" "live"]
  :video-embed-path "ispooge/video-platforms-compared"
  :layout :video
  :video-thumbnail-url "/media/videos/ispooge/video-platforms-compared.jpg"
