@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+<channel>
+<atom:link href='https://tinydatacenter.com/' rel='self' type='application/rss+xml'/>
+<title>
+Tiny DC
+</title>
+<link>
+https://tinydatacenter.com/
+</link>
+<description>
+Tiny Data Center
+</description>
+<lastBuildDate>
+Sat, 10 Mar 2018 04:06:36 +0000
+</lastBuildDate>
+<generator>
+clj-rss
+</generator>
+<item>
+<guid>
+https://tinydatacenter.com/2018-03-06-token-auth.html
+</guid>
+<link>
+https://tinydatacenter.com/2018-03-06-token-auth.html
+</link>
+<title>
+Token Auth
+</title>
+<description>
+&lt;p&gt;Similar to archive, but available to public. Focus on RSS and CDN.&lt;/p&gt;&lt;p&gt;RSS is simple with Cryogen via Tags. Can create a variety of channels, offering selection of readers.&lt;/p&gt;&lt;p&gt;Embed iframe. Sign content, or auth via YubiKey.&lt;/p&gt;&lt;p&gt;System login also possible in another episode: &lt;a href='2018-03-09-draft-u2f-login.html'&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+<pubDate>
+Tue, 06 Mar 2018 00:00:00 +0000
+</pubDate>
+</item>
+<item xmlns:superlink="https://ispooge.com/schema/superlink.xsd">
+<guid>
+https://tinydatacenter.com/2018-03-06-online-publication.html
+</guid>
+<superlink:link>
+https://super.tinydatacenter.com/2018-03-06-online-publication.html
+</superlink:link>
+<link>
+https://tinydatacenter.com/2018-03-06-online-publication.html
+</link>
+
+<title>
+Online Publication (Blog/Vodcast, RSS)
+</title>
+<description>
+&lt;p&gt;Similar to archive, but available to public. Focus on RSS and CDN.&lt;/p&gt;&lt;p&gt;RSS is simple with Cryogen via Tags. Can create a variety of channels, offering selection of readers.&lt;/p&gt;&lt;p&gt;Embed iframe. Sign content, or auth via YubiKey.&lt;/p&gt;&lt;p&gt;Lots of hacking on this one, check the YT channel. Recent days.&lt;/p&gt;
+</description>
+<pubDate>
+Tue, 06 Mar 2018 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<guid>
+https://tinydatacenter.com/2018-03-06-archival-project.html
+</guid>
+<link>
+https://tinydatacenter.com/2018-03-06-archival-project.html
+</link>
+<title>
+Archival Project
+</title>
+<description>
+&lt;p&gt;Creates a fair use copy of online resources, such as your own YouTube playlists and videos.&lt;/p&gt;&lt;p&gt;Archived material is bundled into a maximally available static distribution format. At its most general and simple, one large incrementally built docker image can be created and distributed to a CDN.&lt;/p&gt;&lt;pre&gt;&lt;code&gt;scripts/download-playlist.sh PLD5lYPY-uZpoqkKmEG0JmBx28ukXnRPc4
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;readme (needs work):&lt;/p&gt;&lt;p&gt;https://github.com/harlanji/tinydatacenter/commit/4eb7d0372038eccbfa67db2e84c158050ec1f6a1#diff-e0c1975268c786c35b87dc4fd3e77c5d&lt;/p&gt;&lt;p&gt;make page for video: &lt;/p&gt;&lt;p&gt;https://github.com/harlanji/tinydatacenter/commit/4eb7d0372038eccbfa67db2e84c158050ec1f6a1#diff-6c24e0d1419d38dacca21f22f8f2f3a9&lt;/p&gt;
+</description>
+<pubDate>
+Tue, 06 Mar 2018 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<guid>
+https://tinydatacenter.com/2018-02-04-webserver.html
+</guid>
+<link>
+https://tinydatacenter.com/2018-02-04-webserver.html
+</link>
+<title>
+Webserver
+</title>
+<description>
+&lt;h1 id=&quot;simple&amp;#95;website&quot;&gt;Simple website&lt;/h1&gt;&lt;p&gt;(Not scalable)&lt;/p&gt;&lt;h3 id=&quot;needs&quot;&gt;Needs&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Tiny Computer&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;generate&quot;&gt;Generate&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Download and write RasPi SD card image&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;code&gt;xz -e hypriot-1.7.0.img.xz&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;dd if=hypriot-1.7.0.img of=/dev/sda bs=128KB conv=fsync&lt;/code&gt;&lt;/p&gt;&lt;p&gt;When this completes, the card is ready to boot up the RasPi.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Insert SD card into RasPi, boot up, and configure&lt;/li&gt;&lt;li&gt;Create a new directionctory with index file and start script&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;code&gt;cp tinydatacenter/starter-website.com mysite.com&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;cd mysite.com&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;nano index.html&lt;/code&gt;&lt;/p&gt;&lt;p&gt;Nano is a text editor similar to MS Word, except it runs without a cursor or windows that can be moved around. It's called a &quot;Command line tool&quot;&lt;/p&gt;&lt;p&gt;If this is too uncomfortable we can skip sraight to installing a &lt;a href='desktop.html'&gt;desktop&lt;/a&gt; system so that you can use a normal window based text editor.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Create initial files&lt;ul&gt;&lt;li&gt;&lt;a href='https://github.com/harlanji/tinydatacenter/commit/e370eb5d5dfd8af3aba7cb5418defd2bb4081f05'&gt;GH commit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Create scripts to start and stop the server&lt;ul&gt;&lt;li&gt;&lt;a href='https://github.com/harlanji/tinydatacenter/commit/c7f4bf429786fdc5f7b948df5012a4541c275ea7'&gt;GH commit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;&lt;h3 id=&quot;operate&quot;&gt;Operate&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Start website with start script&lt;/li&gt;&lt;/ol&gt;&lt;ol&gt;&lt;li&gt;Make a change&lt;/li&gt;&lt;li&gt;Rebuild and restart website&lt;/li&gt;&lt;/ol&gt;&lt;h3 id=&quot;destroy&quot;&gt;Destroy&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Stop script&lt;/li&gt;&lt;/ol&gt;
+</description>
+<pubDate>
+Sun, 04 Feb 2018 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<guid>
+https://tinydatacenter.com/2018-02-04-webserver-net.html
+</guid>
+<link>
+https://tinydatacenter.com/2018-02-04-webserver-net.html
+</link>
+<title>
+Networked Webserver
+</title>
+<description>
+&lt;h3 id=&quot;needs&quot;&gt;Needs&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Simple Website&lt;/li&gt;&lt;li&gt;Internet Connection&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;generate&quot;&gt;Generate&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Done :)&lt;/li&gt;&lt;/ol&gt;&lt;h3 id=&quot;operate&quot;&gt;Operate&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Configure port forwarding&lt;/li&gt;&lt;/ol&gt;&lt;h3 id=&quot;destroy&quot;&gt;Destroy&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Turn off port forwarding&lt;/li&gt;&lt;/ol&gt;
+</description>
+<pubDate>
+Sun, 04 Feb 2018 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<guid>
+https://tinydatacenter.com/2018-02-04-docker.html
+</guid>
+<link>
+https://tinydatacenter.com/2018-02-04-docker.html
+</link>
+<title>
+Docker
+</title>
+<description>
+&lt;p&gt;Docker is a tool that lets people create software packages that can be run on any system that supports Docker and the same processor architecture.&lt;/p&gt;&lt;h3 id=&quot;needs&quot;&gt;Needs&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Website (connected to Internet optional)&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;generate&quot;&gt;Generate&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Create a Dockerfile&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;The Dockerfile picks a base &quot;image&quot; and adds the necessary files needed to run the website. The base image should have the same software that you used to create your website with. After the first website, usually you create a Dockerfile right away that resembles a project that you've created before.&lt;/p&gt;&lt;pre&gt;&lt;code&gt;FROM rpi-whatever
+WORKDIR /www
+ADD index.html index.html
+CMD &amp;#91;&amp;quot;python&amp;quot;, &amp;quot;-m&amp;quot; ,&amp;quot;SimpleHTTPServer&amp;quot;, &amp;quot;9090&amp;quot;, &amp;quot;.&amp;quot;&amp;#93;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;operate&quot;&gt;Operate&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Build website with docker&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;code&gt;docker build -t mysite.com .&lt;/code&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Start website with docker&lt;/li&gt;&lt;/ol&gt;&lt;pre&gt;&lt;code&gt;docker run -d --restart always \
+--name mysite.com-www \
+
+mysite.com
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is a long command, so it's useful to put it into a script file. Let's call it &lt;code&gt;start.sh&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;Script files have two extra parts, there is a top line that tells it which command to use to run (what you normally interact with on the screen is called &lt;code&gt;bash&lt;/code&gt;).&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+&amp;#91;the commands&amp;#93;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then run&lt;/p&gt;&lt;p&gt;&lt;code&gt;chmod a+x start.sh&lt;/code&gt;&lt;/p&gt;&lt;h3 id=&quot;destroy&quot;&gt;Destroy&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Stop docker process&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;code&gt;docker rm -f mysite.com-www&lt;/code&gt;&lt;/p&gt;
+</description>
+<pubDate>
+Sun, 04 Feb 2018 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<guid>
+https://tinydatacenter.com/2018-02-04-desktop.html
+</guid>
+<link>
+https://tinydatacenter.com/2018-02-04-desktop.html
+</link>
+<title>
+Desktop
+</title>
+<description>
+&lt;p&gt;Installing a desktop is a side route and not required for any kind of services, but it's comfortable for people to be able to use a mouse and have a familiar graphical interface to use. It's similar to Mac and Windows, but something different called Linux that is created as free software similar to the methodology used to create this set of tutorials.&lt;/p&gt;&lt;h3 id=&quot;needs&quot;&gt;Needs&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;1 raspi&lt;/li&gt;&lt;li&gt;keyboard&lt;/li&gt;&lt;li&gt;mouse&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;generate&quot;&gt;Generate&lt;/h3&gt;&lt;p&gt;The desktop system is a software package like any other. It can be installed and uninstalled, is optional to start and stop, and can be configured to start automatically.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;code&gt;sudo apt-get install &amp;#95;&amp;#95;&amp;#95;&amp;#95;&lt;/code&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;There are a number of pieces to install to this, beyond the scope of what I hope to accomplish. Others have created a script that we can leverage. It's good practice to study the source code. Here's the full command:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;``&lt;/li&gt;&lt;li&gt;&lt;code&gt;startx&lt;/code&gt; will run the desktop system&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;operate&quot;&gt;Operate&lt;/h3&gt;&lt;h3 id=&quot;destroy&quot;&gt;Destroy&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Go to account and then logout, which will return you to the command line (like old school MS dos)&lt;/li&gt;&lt;li&gt;&lt;code&gt;sudo apt-get remove &amp;#95;&amp;#95;&amp;#95;&amp;#95;&amp;#95;&lt;/code&gt;&lt;/li&gt;&lt;/ol&gt;&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;https://github.com/hypriot/x11-on-HypriotOS&lt;/li&gt;&lt;/ul&gt;
+</description>
+<pubDate>
+Sun, 04 Feb 2018 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<guid>
+https://tinydatacenter.com/2018-01-30-livestream.html
+</guid>
+<link>
+https://tinydatacenter.com/2018-01-30-livestream.html
+</link>
+<title>
+Live Streaming
+</title>
+<description>
+&lt;h2 id=&quot;live&amp;#95;streaming&quot;&gt;Live streaming&lt;/h2&gt;&lt;p&gt;Needs&lt;/p&gt;&lt;ul&gt;&lt;li&gt;1 raspi&lt;/li&gt;&lt;li&gt;Internet connection&lt;/li&gt;&lt;li&gt;Laptop with OBS&lt;/li&gt;&lt;/ul&gt;
+</description>
+<pubDate>
+Tue, 30 Jan 2018 00:00:00 +0000
+</pubDate>
+</item>
+<item>
+<guid>
+https://tinydatacenter.com/2018-01-24-webserver-online-and-global.html
+</guid>
+<link>
+https://tinydatacenter.com/2018-01-24-webserver-online-and-global.html
+</link>
+<title>
+Go global with CDN
+</title>
+<description>
+&lt;h2 id=&quot;global&amp;#95;scale&amp;#95;webserver&quot;&gt;Global Scale Webserver&lt;/h2&gt;&lt;p&gt;Configuring CDN for a scalable web server. About an hour of me navigating around the CF console, talking about settings.&lt;/p&gt;&lt;p&gt;Needs&lt;/p&gt;&lt;ul&gt;&lt;li&gt;1 raspi&lt;/li&gt;&lt;li&gt;Internet connection&lt;/li&gt;&lt;/ul&gt;
+</description>
+<pubDate>
+Wed, 24 Jan 2018 00:00:00 +0000
+</pubDate>
+</item>
+</channel>
+</rss>
