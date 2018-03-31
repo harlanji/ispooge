@@ -1,5 +1,6 @@
-{:title "iSpooge Live"
+{:title "Live"
  :page-index 100
+ :navbar? true
  :layout :live
  :video-thumbnail-url "/media/videos/Huel_Break-AYt0HH2AwOc.jpg"
  :video-url "https://ispooge.com/hls/ispoogedaily/index.m3u8"

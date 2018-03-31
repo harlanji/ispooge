@@ -1,6 +1,7 @@
 {:title "Subscriptions"
  :layout :subscriptions
- :page-index 50}
+ :navbar? true
+ :page-index 200}
 
 Subscriptions
 
