@@ -1,5 +1,5 @@
 {% extends "/html/base.html" %}
-{%block subtitle %}: {{post.title}}{% endblock %}
+{%block subtitle %}: f {{post.title}} on {{post.date|date:"MM.dd"}}{% endblock %}
 {% block content %}
 <div id="post">
     {% include "/html/post-content.html" %}

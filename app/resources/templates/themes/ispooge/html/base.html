@@ -53,9 +53,9 @@
                     <ul class="dropdown-menu" role="menu">
 
                       {% if latest-posts|not-empty %}
-                        <li class="dropdown-header">Recent Posts</li>
+                        <li class="dropdown-header">Recently</li>
                         {% for post in latest-posts %}
-                          <li><a href="{{post.uri}}">{{post.title}}</a></li>
+                          <li><a href="{{post.uri}}">{{post.title}} <small>on {{post.date|date:"MM.dd"}}</small></a></li>
                           {% endfor %}
                       {% endif %}
 

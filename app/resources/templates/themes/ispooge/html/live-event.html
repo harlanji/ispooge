@@ -1,4 +1,11 @@
 {% extends "/html/base.html" %}
+<!--
+This is to be used while an event post is live. after live, it takes the normal
+video page. 
+in our ops guide, we have creating live stream and creating a video from a live
+stream. the change would be made there. start live stream with layout live-event, 
+change to video layout in latter.
+-->
 {%block subtitle %}: {{post.title}}{% endblock %}
 
 {% block head %}
