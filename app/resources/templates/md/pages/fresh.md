@@ -1,17 +1,20 @@
 {:title "FreshSpooge"
- :layout :page
+ :layout :fresh
  :navbar? false
  :toc? true
+ :video-yt-id "owr-z4-y05c"
  :description "FreshSpooge 3.0"
  }
 
 FreshSpooge is a solution for video websites and apps.
 
+
+
 ## For live streamers
 
 FreshSpooge allows you to stream low latency to your viewers without commercial or other inturruption. Video chunks 
 are written to the file system and served directly to your audience, via CDN if one is configured, using the industry-accepted 
-HLS technique.
+techniques.
 
 ## For YouTube channels
 
@@ -28,7 +31,8 @@ and make it public if you like. Third party login integration is simple to add t
 ## For families
 
 IT operations are cumbersome and sometimes we store sensitive information. Worse, sometimes our computer 
-illiterate family mambers store valuable information and it is lost during a confusing click through process.
+illiterate family members store valuable information and it is lost during a confusing click through process.
+
 
 
 
@@ -39,17 +43,19 @@ illiterate family mambers store valuable information and it is lost during a con
 * Engage audiences through syndicate networks such as YouTube, Twitch, Facebook, Periscope, and more.
 * Industry-accepted video delivery technology (HLS from Apple)
 * Industry-accepted video player technology (VideoJS + HTML5)
-* Adaptive rate video playback works works for mobile
+* Adaptive rate video playback works for mobile, desktop
 * Low-latency live streaming
 * Hardware accelerated video processing
 * iOS and Android system media player integration.
+
+# WHATS ISPOOGE LIVE VIDEO
 
 
 # System Requirements
 
 * RaspberryPi
-* For unlimited scalability: static web host or CDN
-* For live streaming: CDN, RTMP source such as OBS or a webcam.
+* **For unlimited scalability** static web host or CDN
+* **For live streaming** RTMP source such as OBS or a webcam.
 
 
 # Design
