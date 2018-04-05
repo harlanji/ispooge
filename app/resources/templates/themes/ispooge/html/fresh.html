@@ -1,5 +1,13 @@
 {% extends "/html/base.html" %}
 {%block subtitle %}: {{page.title}}{% endblock %}
+
+{% block head %}
+
+
+{% include "/html/partials/video-head-videojs.html" %}
+
+{% endblock %}
+
 {% block content %}
 <div id="custom-page">
     <div id="page-header">
@@ -8,7 +16,27 @@
 
     {% if page.video-yt-id %}
       <div id="whats-ispooge-live-video-yt" style="">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{ page.video-yt-id }}?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        
+        
+<video id="video-player" width="640" height="360" class="video-js vjs-default-skin" 
+  controls poster="{{page.video-thumbnail-url}}" data-setyp='{"controls": "true", "loop": "false", "autoplay": "false", "preload": "false"}'>
+    <source src="{{page.video-url}}" type="application/x-mpegURL">
+    </source>
+    <p class="vjs-no-js">The browser doesn't seem to support our video player... new browsers should.</p>
+  </video>
+  
+  <script>
+  var player = videojs('video-player');
+  
+  							player.ready(function() {
+  							
+  							   player.mediaSession();
+  });
+  //player.play();
+  </script>
+  
+          
+        
       </div>
     {% endif %}
 

@@ -52,12 +52,32 @@ In the markdown place a header `# WHATS ISPOOGE LIVE VIDEO`; ID is derived from 
 
 "what's ispooge live?" should be self hosted... do transcode
 
+1:17 - deployed updated version
 
 
 ## Notes
 
 
+
 ### ideas
+
+monetization
+  - emails/calls
+  - payment/tip integration
+    - we have steemit--produce work for it
+    - GNU Taler for cash+anon
+- rss reader app
+- writing
+  - presentation updates
+    - [x] link what's ispooge live video
+    - [ ] transcode video for self host
+  - daily broadcasting ops
+  - ux tweets from screenshots
+- videojs r&d
+  - commercial spots
+  - annotated comments
+
+
 
 
 ### todo
@@ -65,3 +85,8 @@ In the markdown place a header `# WHATS ISPOOGE LIVE VIDEO`; ID is derived from 
 
 
 ## Links
+
+
+* [https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild)
+
+

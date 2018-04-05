@@ -3,6 +3,9 @@
  :navbar? false
  :toc? true
  :video-yt-id "owr-z4-y05c"
+ :video-thumbnail-url "/media/videos/ispooge/whats-ispooge-live.jpg"
+ :video-url           "/media/videos/ispooge/whats-ispooge-live.hls/playlist.m3u8" 
+ 
  :description "FreshSpooge 3.0"
  }
 
