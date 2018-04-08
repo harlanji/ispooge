@@ -14,6 +14,11 @@
         <h2>{{page.title}}</h2>
     </div>
 
+
+    {% if page.toc %}{{page.toc|safe}}{% endif %}
+    {{page.content|safe}}
+
+
     {% if page.video-yt-id %}
       <div id="whats-ispooge-live-video-yt" style="">
         
@@ -39,9 +44,6 @@
         
       </div>
     {% endif %}
-
-    {% if page.toc %}{{page.toc|safe}}{% endif %}
-    {{page.content|safe}}
 
 
 <script>
