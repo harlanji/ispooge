@@ -23,5 +23,5 @@ IMAGE_STATIC=docker-registry.local:5000/ispooge.com/ispooge-static:25
 IMAGE_STATIC_LOCAL=ispooge-static
 
 NAME_STREAMING=ispooge.com-streaming
-IMAGE_STREAMING=docker-registry.local:5000/ispooge.com/ispooge-streaming:1
+IMAGE_STREAMING=docker-registry.local:5000/ispooge.com/ispooge-streaming:2
 IMAGE_STREAMING_LOCAL=ispooge-streaming

@@ -88,6 +88,10 @@ to `http://$HOST:33936/live-360p.html`.
 
 Publish an RTMP stream such as OBS or a webcam to `rtmp://$HOST:33935/ispoogedaily_local/ispoogedaily_360`.
 
+For the best results, you should use the transcoding options available... to do this
+you publish instead to `rtmp://$HOST:33935/ispoogedaily_source/ispoogedaily_360` and then run the
+transcoding script `scripts/transcode-stream-360p.sh`. This script is optimized for
+RasPi3's H264 accelerated hardware.
 
 ### Syndicating
 
