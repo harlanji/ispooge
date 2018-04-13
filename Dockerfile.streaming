@@ -1,0 +1,9 @@
+FROM nginx-rtmp
+
+# NOTE need to clone from github.
+# can be changed from jessie to xenial build-pack
+
+COPY nginx.conf /etc/nginx/nginx.conf
+
+WORKDIR /tmp/http
+ADD app/resources/public /tmp/http
