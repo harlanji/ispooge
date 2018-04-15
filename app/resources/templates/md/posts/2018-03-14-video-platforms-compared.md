@@ -2,6 +2,7 @@
  :tags ["video" "live"]
  :video-embed-path "ispooge/video-platforms-compared"
  :layout :video
+ :video-path "ispooge/video-platforms-compared"
  :video-thumbnail-url "/media/videos/ispooge/video-platforms-compared.jpg"
  :video-url           "/media/videos/ispooge/video-platforms-compared.hls/playlist.m3u8"
  :video-description "Video platforms compared"
