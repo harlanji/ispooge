@@ -11,7 +11,7 @@
 
 FreshSpooge is a solution for video websites and apps.
 
-
+# WHATS ISPOOGE LIVE VIDEO
 
 ## For live streamers
 
@@ -36,9 +36,6 @@ and make it public if you like. Third party login integration is simple to add t
 IT operations are cumbersome and sometimes we store sensitive information. Worse, sometimes our computer 
 illiterate family members store valuable information and it is lost during a confusing click through process.
 
-
-
-
 # Features
 
 * Free and Libre interactive video solution
@@ -51,7 +48,6 @@ illiterate family members store valuable information and it is lost during a con
 * Hardware accelerated video processing
 * iOS and Android system media player integration.
 
-# WHATS ISPOOGE LIVE VIDEO
 
 
 # System Requirements
@@ -65,3 +61,7 @@ illiterate family members store valuable information and it is lost during a con
 
 * Lectures are available on our YouTube channel, mostly in the [Tiny Datacenter](https://www.youtube.com/watch?v=7rcR3zLaGxw&list=PLD5lYPY-uZpoEVzJkgE2ejlSk9uG2TRlP) playlist
 * Please ask for specific details if desired.
+
+# Download
+
+* [Source Code](https://github.com/harlanji/ispooge)
