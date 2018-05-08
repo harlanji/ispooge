@@ -100,3 +100,7 @@ variant:
 
 * `ffmpeg -i rtmp://$HOST:33935/ispoogedaily_local/ispoogedaily_720 -c copy -f flv rtmp://_____`
 
+## License
+
+Project is available under the MIT license. Please contact us for customizations;
+we prefer to keep them public and MIT licensed.
