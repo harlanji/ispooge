@@ -8,4 +8,6 @@ Many thanks are owed for the existence of this project.
 * David Taylor - material support of initial development
 * James Greene - material support of initial development
 * Aaron Lang - material support of initial development
+* Michael Haselton - material support of initial development
+* Matthew Harrison - material support of initial development
 * iSpooge Daily followers - ideas, entertainment
