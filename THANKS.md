@@ -1,6 +1,7 @@
 # Thanks
 
 Many thanks are owed for the existence of this project.
+If you enjoy this project, please pay it forward!
 
 * The giants whose shoulders we stand on--free software community
 * Harlan Iverson - original creator
