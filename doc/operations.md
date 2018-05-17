@@ -13,6 +13,7 @@ Assume you want to create a page A from the `ispooge.com-v2` directory.
 * `touch md-pages/A.md`
 * Edit the page with your editor... `nano` in CLI, `Bluefish` in X.
 
+From here we can fall back to Cryogen documentation.
 
 
 ## Create a new playlist
@@ -32,6 +33,8 @@ the playlist-Random tag combined with a filter of same name in config.edn--creat
    +- NAME-ID.json
 
 ```
+
+From here, these are just pages.
 
 
 ## Create a new video
@@ -93,3 +96,10 @@ From the `ispooge.com-v2` directory:
 * `./build.sh`
 * `./stop-proxy.sh ; ./start-proxy.sh` to restart the proxy with new config
 * Ensure that OBS is pushing to `ispoogedaily_live`.
+
+## Use RasPi OMX Hardware Transcoding
+
+You can safely run multiple transcoding streams via the OMX hardware. I use three
+and am experimenting with the best settings. Using a custom compiled ffmpeg
+you can get substantial speedups in video processing.
+
