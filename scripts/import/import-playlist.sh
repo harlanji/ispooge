@@ -37,7 +37,7 @@ for vid in $VIDEOS; do
   
     mkdir -p $hls
     cd $hls
-    #$ISPOOGE/scripts/segment-video.sh $vid_file
+    #$ISPOOGE/scripts/import/segment-video.sh $vid_file
   fi  
     
   cd $ISPOOGE
