@@ -4,10 +4,27 @@ iSpooge Live is a project aims to allow sovereigns to have a platform that plays
 well with others. This philosophy is reflected in our contributor guidelines. 
 Thanks for considering helping us out.
 
+
+## The lowdown
+
+This project is a personal mission. I'm working toward a 1.0 release 
+and have a development track that I want to lay down.
+
+I want to share the project free, so it's MIT licensed. I may join
+the social works later. I am happy for communities to develop without
+my participation, am open to invitations.
+
 ## Important artifacts
 
-* README.md
-* ROADMAP.md -- spoiler: we choose none
+* README.md -- developer documentation
+* doc/ -- creator documentation
+  * ROADMAP.md -- spoiler: we choose none
+  * PERSONAS.md -- friends who think about iSpooge Live
+  * THANKS.md -- contributors
+  * operations.md --
+  * features.md --
+  * glossary.md -- 
+
 
 ## Communication
 
