@@ -1,3 +1,2 @@
-./app
-./scripts/env-local.sh
+scripts/env-local.sh
 *~
