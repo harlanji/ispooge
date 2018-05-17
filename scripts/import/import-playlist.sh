@@ -16,7 +16,7 @@ mkdir -p $PLAYLIST
 cd $PLAYLIST
 
 
-#$ISPOOGE/scripts/download-playlist.sh $PLAYLIST_ID
+#$ISPOOGE/scripts/import/download-playlist.sh $PLAYLIST_ID
 
 ls -la
 
@@ -42,9 +42,9 @@ for vid in $VIDEOS; do
     
   cd $ISPOOGE
   pdate=`date +%Y-%m-%d` # todo get from video metadata
-  scripts/make-video-page.sh $vid $NAME > "md-posts/${pdate}-video-${vid}.md" 
+  scripts/import/make-video-page.sh $vid $NAME > "md-posts/${pdate}-video-${vid}.md" 
 done
 
 cd $ISPOOGE
 pdate=`date +%Y-%m-%d` # todo get from playlist metadata
-scripts/make-playlist-page.sh $PLAYLIST $NAME > "md-posts/${pdate}-playlist-${NAME}.md"
+scripts/import/make-playlist-page.sh $PLAYLIST $NAME > "md-posts/${pdate}-playlist-${NAME}.md"

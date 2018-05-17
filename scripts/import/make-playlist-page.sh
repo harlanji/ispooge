@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# we have run download-playlist.sh in $PLAYLIST_DIR
+# we have run import/download-playlist.sh in $PLAYLIST_DIR
 # we have segmented each video in the playlist
 # there is a thumbnail for each downloaded video
 
