@@ -1,8 +1,8 @@
 {:layout :page
  :title "Doc: operations"
- :page-index 4002
- :navbar? true
- :generated-at 1526528885
+ :page-index 4003
+ :navbar? false
+ :generated-at 1526529251
  :last-modified 1526513584
  }
 

@@ -1,8 +1,8 @@
 {:layout :page
  :title "Doc: features"
- :page-index 4001
- :navbar? true
- :generated-at 1526528884
+ :page-index 4002
+ :navbar? false
+ :generated-at 1526529251
  :last-modified 1526522869
  }
 
