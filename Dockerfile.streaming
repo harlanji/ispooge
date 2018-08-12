@@ -15,3 +15,6 @@ RUN mkdir -p /tmp/http/media
 VOLUME /tmp/http/media
 
 USER root
+
+#WORKDIR /tmp/http
+#ADD app/resources/public /tmp/http

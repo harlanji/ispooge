@@ -2,7 +2,8 @@
 
 # use with source
 
-ISPOOGE_MEDIA_PATH="$HOME/ispooge-media"
+#ISPOOGE_MEDIA_PATH="$HOME/ispooge-media"
+ISPOOGE_MEDIA_PATH="$HOME/mnt/ispooge-media-aws/ispooge-media"
 
 IMAGE=ispooge-build
 # todo: IMAGE_DEV like STATIC
