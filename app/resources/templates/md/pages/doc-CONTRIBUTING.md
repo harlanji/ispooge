@@ -2,8 +2,8 @@
  :title "Doc: CONTRIBUTING"
  :page-index 4000
  :navbar? false
- :generated-at 1526597700
- :last-modified 1526522778
+ :generated-at 1539652323
+ :last-modified 1530637082
  }
 
 # Contributing to iSpooge Live
