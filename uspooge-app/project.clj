@@ -7,16 +7,21 @@
   
   
   :min-lein-version "2.7.1"
-  :jvm-opts ["-Xmx512M"]
+  :jvm-opts ["-Xmx512M"
+             "--add-modules" "java.xml.bind"]
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.9.946"]
+                 [org.clojure/clojurescript "1.10.439"]
                  [org.clojure/core.async  "0.4.474"]
-                 [reagent "0.7.0"]
-                 
-                 
 
-                 [cljsjs/react-router-dom "4.2.2-0" :exclusions [cljsjs/react]]
+[baking-soda "0.2.0"]
+[reagent "0.8.1" :exclusions [cljsjs/react
+                              cljsjs/react-dom]]
+[cljsjs/react "16.3.2-0"]
+[cljsjs/react-dom "16.3.2-0"]
+[cljsjs/react-transition-group "2.3.1-0"]
+[cljsjs/react-popper "0.10.4-0"]
+
                  [cljs-http "0.1.44"]
                  ]
 

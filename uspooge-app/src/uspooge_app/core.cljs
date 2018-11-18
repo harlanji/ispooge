@@ -4,14 +4,15 @@
     (:require [clojure.string :as str]
               [reagent.core :as r]
               [cljs-http.client :as http]
-              [cljs.core.async :as async :refer [<!]]))
+              [cljs.core.async :as async :refer [<!]]
+              [baking-soda.core :as b]))
 
 (enable-console-print!)
 
 
 (defonce feeds (r/atom []))
 (defonce active-user (r/atom {:name "Anonymous CoW"}))
-(defonce app-state (r/atom {:text "Hello clojure world!" :__figwheel_counter 0 :active-user active-user}))
+(defonce app-state (r/atom {:text "Hello clojure world!" :nav-open? true :__figwheel_counter 0 :active-user active-user}))
  
 
 
@@ -61,18 +62,34 @@
   (when (= (-> item :media :content-type) "text/html")
     (iframe-video-item item)))
 
+(defn feeds-as-list [feeds]
+  [:ul
+    (for [feed feeds]
+      [:li (:title feed) (-> (:items feed) video-items feed-items)])])
+
+(defn toggle-nav [app-state]
+  (swap! app-state update :nav-open? (fn [nav-open?] (not nav-open?))))
+
 (defn hello-world [app-state]
   (fn []
     [:div
+     [b/Navbar
+            
+              [b/NavbarBrand "HolaB"]
+              [b/NavbarToggler {:on-click #(toggle-nav app-state)} [:span "menu"]]
+              
+              [b/Collapse {:is-open (get @app-state :nav-open?) :navbar "navbar"}
+            [b/Nav {:pills true} [b/NavItem [b/NavLink {:href "/"} "Hola"]] [b/NavItem [b/NavLink {:href "#"} "Hola 2"]]]
+            ]
+            ]
      [:h1 (:text @app-state)]
      [:h2 "You are " (get @(:active-user @app-state) :name "Anonymous cow")]
      [:h3 "Edit This and watch it change!"]
      [:p "We've reloaded " [:strong (:__figwheel_counter @app-state)] " times (not counting errorz)."]
-     (when true
-       [:ul
-         (for [feed @feeds]
-           [:li (:title feed) (-> (:items feed) video-items feed-items)])]
-       )]))
+     [b/Button {:color    "danger"
+                :on-click #(js/alert "HOLA")}
+      "Say Hola"]
+     (feeds-as-list @feeds)]))
 
 
 
