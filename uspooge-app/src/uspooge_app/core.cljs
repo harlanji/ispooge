@@ -1,28 +1,19 @@
 (ns uspooge-app.core
-    (:require-macros [cljs.core.async.macros :refer [go]])
+  (:require-macros [cljs.core.async.macros :refer [go]])
 
-    (:require [clojure.string :as str]
-              [reagent.core :as r]
-              [cljs-http.client :as http]
-              [cljs.core.async :as async :refer [<!]]
-              [baking-soda.core :as b]))
+  (:require [clojure.string :as str]
+            [reagent.core :as r]
+            [cljs-http.client :as http]
+            [cljs.core.async :as async :refer [<!]]
+            [baking-soda.core :as b]))
 
 (enable-console-print!)
-
 
 (defonce feeds (r/atom []))
 (defonce active-user (r/atom {:name "Anonymous CoW"}))
 (defonce app-state (r/atom {:text "Hello clojure world!" :nav-open? true :__figwheel_counter 0 :active-user active-user}))
- 
 
-
-
-
-
-
-
-(println "h      i")  
-  
+(println "h      i")
 
 (defn item-is-yt? [item]
   (not (nil? (:yt-id item))))
@@ -37,22 +28,19 @@
 
 (defn yt-item [item]
   [:div {} [:iframe.feed-video {:src (str "https://www.youtube-nocookie.com/embed/" (:yt-id item) "?rel=0&amp;showinfo=0")
-                                          :frameborder "0"
-                                          :allow "autoplay; encrypted-media"
-                                          :allowfullscreen "allowfullscreen"}]])
+                                :frameborder "0"
+                                :allow "autoplay; encrypted-media"
+                                :allowfullscreen "allowfullscreen"}]])
 
 (defn feed-items [items]
   [:ul
-    (for [item items]
-      [:li.feed-item
-        [:a {:href (:url item)} [:p (:title item)]]
-        [:div {} (if (item-is-video? item)
-          (video-item item)
-          (when (item-is-yt? item)
-            (yt-item item)))]
-      ])])
-
-
+   (for [item items]
+     [:li.feed-item
+      [:a {:href (:url item)} [:p (:title item)]]
+      [:div {} (if (item-is-video? item)
+                 (video-item item)
+                 (when (item-is-yt? item)
+                   (yt-item item)))]])])
 
 (defn iframe-video-item [item]
   (let [media (:media item)]
@@ -64,8 +52,8 @@
 
 (defn feeds-as-list [feeds]
   [:ul
-    (for [feed feeds]
-      [:li (:title feed) (-> (:items feed) video-items feed-items)])])
+   (for [feed feeds]
+     [:li (:title feed) (-> (:items feed) video-items feed-items)])])
 
 (defn toggle-nav [app-state]
   (swap! app-state update :nav-open? (fn [nav-open?] (not nav-open?))))
@@ -74,14 +62,13 @@
   (fn []
     [:div
      [b/Navbar
-            
-              [b/NavbarBrand "HolaB"]
-              [b/NavbarToggler {:on-click #(toggle-nav app-state)} [:span "menu"]]
-              
-              [b/Collapse {:is-open (get @app-state :nav-open?) :navbar "navbar"}
-            [b/Nav {:pills true} [b/NavItem [b/NavLink {:href "/"} "Hola"]] [b/NavItem [b/NavLink {:href "#"} "Hola 2"]]]
-            ]
-            ]
+
+      [b/NavbarBrand "HolaB"]
+      [b/NavbarToggler {:on-click #(toggle-nav app-state)} [:span "menu"]]
+
+      [b/Collapse {:is-open (get @app-state :nav-open?) :navbar "navbar"}
+       [b/Nav {:pills true} [b/NavItem [b/NavLink {:href "/"} "Hola"]] [b/NavItem [b/NavLink {:href "#"} "Hola 2"]]]]]
+
      [:h1 (:text @app-state)]
      [:h2 "You are " (get @(:active-user @app-state) :name "Anonymous cow")]
      [:h3 "Edit This and watch it change!"]
@@ -91,29 +78,20 @@
       "Say Hola"]
      (feeds-as-list @feeds)]))
 
-
-
 (defn on-js-reload []
   ;; optionally touch your app-state to force rerendering depending on
   ;; your application
-  (swap! app-state update-in [:__figwheel_counter] inc)
-
-    
-    
-)
+  (swap! app-state update-in [:__figwheel_counter] inc))
 
 (defn ^:export login []
- (reset! active-user {:name "Harlan TimE"}))
+  (reset! active-user {:name "Harlan TimE"}))
 
 (defn get-rss-feed [url]
   (println "getting rss feed: " url)
   (go (let [response (<! (http/get url
-                           {:with-credentials? false
-                            :response-type :document}))]
-    (:body response))))
-    
-
-
+                                   {:with-credentials? false
+                                    :response-type :document}))]
+        (:body response))))
 
 (defn parse-media [item-node]
   (when-let [media-group-node (.querySelector item-node "*|group")]
@@ -126,7 +104,7 @@
                  :content-type content-type
                  :height height
                  :width width}]
-          media)))
+      media)))
 
 (defn map-rss-feed-item [item-node]
   (let [title (-> item-node (.querySelector "title") .-textContent .trim)
@@ -137,15 +115,13 @@
 
         object-type-node (.querySelector item-node "*|object-type")
         object-type (when object-type-node (-> object-type-node .-textContent .trim))
-        
-        
+
         media (parse-media item-node)
-        
+
         yt-id (.querySelector item-node "*|videoId")
         yt-id (when yt-id (-> yt-id .-textContent .trim))
-        
-        object-type (when object-type-node (-> object-type-node .-textContent .trim))
-        ]
+
+        object-type (when object-type-node (-> object-type-node .-textContent .trim))]
     {:guid guid
      :key guid
      :title title
@@ -166,9 +142,7 @@
 
 (defn get-rss-sources []
   (let [hash (-> js/document .-location .-hash)]
-   (filter #(not (empty? %)) (str/split (.substr hash 1) ";"))))
-
-
+    (filter #(not (empty? %)) (str/split (.substr hash 1) ";"))))
 
 (defn ^:export add-feeds! []
   (println "add-feeds!" js/document.location.hash)
@@ -177,18 +151,13 @@
       (let [feed (map-rss-feed (<! (get-rss-feed url)))]
         (swap! feeds conj feed)
         (println "done" feed)))))
-        
-        
 
 (defn init! []
   (r/render-component [(hello-world app-state)]
-                            (. js/document (getElementById "app")))
+                      (. js/document (getElementById "app")))
   (when (= (count (get-rss-sources)) 0)
     (set! js/document.location.hash (str "#" (or js/window.DEFAULT_FEED "/feed.xml"))))
-  (add-feeds!) 
+  (add-feeds!)
   nil)
-   
-  
-  
-  
+
 (defonce __initialized! (init!))

@@ -4,8 +4,6 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  
-  
   :min-lein-version "2.7.1"
   :jvm-opts ["-Xmx512M"
              "--add-modules" "java.xml.bind"]
@@ -14,16 +12,15 @@
                  [org.clojure/clojurescript "1.10.439"]
                  [org.clojure/core.async  "0.4.474"]
 
-[baking-soda "0.2.0"]
-[reagent "0.8.1" :exclusions [cljsjs/react
-                              cljsjs/react-dom]]
-[cljsjs/react "16.3.2-0"]
-[cljsjs/react-dom "16.3.2-0"]
-[cljsjs/react-transition-group "2.3.1-0"]
-[cljsjs/react-popper "0.10.4-0"]
+                 [baking-soda "0.2.0"]
+                 [reagent "0.8.1" :exclusions [cljsjs/react
+                                               cljsjs/react-dom]]
+                 [cljsjs/react "16.3.2-0"]
+                 [cljsjs/react-dom "16.3.2-0"]
+                 [cljsjs/react-transition-group "2.3.1-0"]
+                 [cljsjs/react-popper "0.10.4-0"]
 
-                 [cljs-http "0.1.44"]
-                 ]
+                 [cljs-http "0.1.44"]]
 
   :plugins [[lein-figwheel "0.5.15"]
             [lein-cljfmt "0.6.0"]
@@ -60,6 +57,8 @@
                ;; This next build is a compressed minified build for
                ;; production. You can build this with:
                ;; lein cljsbuild once min
+
+
                {:id "min"
                 :source-paths ["src"]
                 :compiler {:output-to "resources/public/js/compiled/uspooge_app.js"
@@ -70,8 +69,8 @@
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
              ;; :server-port 3449 ;; default
              ;; :server-ip "127.0.0.1"
-             
-             
+
+
              :hawk-options {} ; slow but lets us work in docker/ssfhs
 
              :css-dirs ["resources/public/css"] ;; watch and update CSS
@@ -107,12 +106,14 @@
 
              ;; to pipe all the output to the repl
              ;; :server-logfile false
-             }
+}
 
 
   ;; Setting up nREPL for Figwheel and ClojureScript dev
   ;; Please see:
   ;; https://github.com/bhauman/lein-figwheel/wiki/Using-the-Figwheel-REPL-within-NRepl
+
+
   :profiles {:dev {:dependencies [[binaryage/devtools "0.9.9"]
                                   [figwheel-sidecar "0.5.15"]
                                   [com.cemerick/piggieback "0.2.2"]]
