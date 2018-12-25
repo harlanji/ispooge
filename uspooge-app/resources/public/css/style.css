@@ -9,3 +9,8 @@
   display: inline;
   float: left;
 }
+
+.feed {
+  list-style: none;
+  padding-left: 0;
+}
