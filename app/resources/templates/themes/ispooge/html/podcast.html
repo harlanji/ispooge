@@ -1,0 +1,49 @@
+{% extends "/html/base.html" %}
+{%block subtitle %}: {{post.title}} on {{post.date|date:"MM.dd"}}{% endblock %}
+{% block content %}
+<div id="post">
+
+<img src="{{ post.cover-src}}" alt="cover image">
+<audio id="audioplayer" preload="auto" controls style="width:100%;" >
+    <source src="{{ post.audio-src }}" type="audio/mp3">
+        Your browser doesn't support the HTML audio tag. You can still download the show, though!
+</audio>
+    <p id="audioplayer_1"></p>
+<script type="text/javascript">
+    var audioTag = document.createElement('audio');
+    /* Do we not support MP3 audio? If not, dynamically made a Flash SWF player.  */
+    if (!(!!(audioTag.canPlayType) && ("no" != audioTag.canPlayType("audio/mpeg")) && ("" != audioTag.canPlayType("audio/mpeg")))) {
+        AudioPlayer.embed("audioplayer_1", {soundFile: "{{ post.audio-src }}", transparentpagebg: "yes"});
+        $( '#audioplayer').hide();
+    }
+    else /* Ok, we do support MP3 audio, style the audio tag into a touch-friendly player */
+    {
+        /* If we didn't do the "if mp3 supported" check above, this call would prompt Firefox install quicktime! */
+        $( '#audioplayer' ).audioPlayer(); 
+    }
+</script>
+
+    {% include "/html/post-content.html" %}
+
+
+
+    {% include "/html/partials/post-pagination.html" %}
+
+    {% if disqus-shortname %}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_config = function () {
+            this.page.url = "{{site-url}}{{uri}}";
+            this.page.identifier = "{{post.title}}";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//{{disqus-shortname}}.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    {% endif %}
+
+
+</div>
+{% endblock %}
