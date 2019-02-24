@@ -15,7 +15,7 @@ for docFile in $DOC_FILES; do
   
   title="Doc: ${baseName}"
 
-  scripts/md-to-page.sh "$docFile" "$title" > "$pageFile"
+  scripts/import/md-to-page.sh "$docFile" "$title" > "$pageFile"
   
   i=$(expr $i + 1)
 done
