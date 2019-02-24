@@ -29,4 +29,18 @@
 
 # rpi omx:  https://signal-flag-z.blogspot.com/2017/05/raspberry-pix264ffmpeg.html
 
-avconv -i $1 -c copy -flags +cgop -g 30 -hls_time 2 -hls_list_size 100000 -bsf h264_mp4toannexb out.m3u8
+VIDEO_PATH="$1"
+
+VIDEO_PATH_PREFIX=$(echo "$VIDEO_PATH" | cut -f 1 -d '.')
+PLAYLIST_PATH="$VIDEO_PATH_PREFIX.m3u8"
+
+avconv \
+  -i $VIDEO_PATH \
+   -c copy \
+   -flags \
+     +cgop \
+     -g 30 \
+     -hls_time 2 \
+     -hls_list_size 100000 \
+     -bsf h264_mp4toannexb \
+   $PLAYLIST_PATH

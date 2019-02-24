@@ -1,5 +1,7 @@
 #!/bin/bash
 
+FLAVOR="raspi-ubuntu" # or mac or windows or x86-ubuntu or tinkerboard-ubuntu
+
 
 # Add user to video group for access to rasppi cam
 sudo usermod -aG video $USER
