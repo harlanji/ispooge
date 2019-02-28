@@ -9,7 +9,7 @@
                            [compojure "1.6.0"]
                            [ring-server "0.5.0"]
                            [cryogen-markdown "0.1.7"]
-                           [cryogen-core "0.1.60-harlanji-SNAPSHOT"]]
+                           [cryogen-core "0.1.65-harlanji-SNAPSHOT"]]
             :plugins [[lein-ring "0.9.7"]]
             :main cryogen.core
             ;:jvm-opts ["-Xmx1G" "-Xverify:none"] ; additive by default -- https://github.com/technomancy/leiningen/pull/1230
