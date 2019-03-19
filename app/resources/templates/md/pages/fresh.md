@@ -1,6 +1,7 @@
 {:title "FreshSpooge"
  :layout :fresh
  :navbar? false
+ :home? true
  :toc? true
  :video-yt-id "owr-z4-y05c"
  :video-thumbnail-url "/media/videos/ispooge/whats-ispooge-live.jpg"

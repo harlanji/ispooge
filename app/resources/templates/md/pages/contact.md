@@ -1,7 +1,7 @@
-{:home? true
- :title "Home"
+{:title "Contact"
  :layout :index
- :page-index 0}
+ :navbar? true
+ :page-index 300}
 
 
 #### Tune in
